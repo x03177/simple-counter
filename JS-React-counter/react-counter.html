@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-counter</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- react -->
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.0.0/umd/react-dom.production.min.js"></script>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+        }
+
+        i {
+            display: block;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            display: block;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        .counter-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .count-step {
+            min-width: 3rem;
+            min-height: 3rem;
+        }
+
+        button.btn-sign {
+            color: rgba(255, 255, 255, .4);
+            height: 3.5rem;
+            width: 3.5rem;
+            font-size: 2rem;
+            border-radius: 99px;
+            background-color: transparent;
+            transition: background-color .3s, color .3s;
+        }
+
+        button.btn-sign:hover {
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        .btn-count-plus[disabled]:hover {
+            cursor: not-allowed;
+            background-color: transparent;
+        }
+
+        .count-number {
+            margin: 15px 30px;
+            font-size: 3rem;
+            font-weight: 600;
+            min-width: 120px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel" src="react-counter.js"></script>
+
+</body>
+
+</html>

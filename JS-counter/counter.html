@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #6190E8;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #A7BFE8, #6190E8);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        i {
+            display: block;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            display: block;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        .counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffffff;
+        }
+
+        .count-step {
+            min-width: 3rem;
+            min-height: 3rem;
+        }
+
+        button.btn-sign {
+            color: rgba(255, 255, 255, .4);
+            height: 3.5rem;
+            width: 3.5rem;
+            font-size: 2rem;
+            border-radius: 99px;
+            background-color: transparent;
+            transition: background-color .3s, color .3s;
+        }
+
+        button.btn-sign:hover {
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        .count-number {
+            margin: 15px 30px;
+            font-size: 3rem;
+            font-weight: 600;
+            min-width: 120px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="counter">
+        <div class="count-step">
+            <button type="button" class="btn-sign btn-count-minus">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+        </div>
+        <div class="count-number">995</div>
+        <div class="count-step">
+            <button type="button" class="btn-sign btn-count-plus">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+        const btnPlus = document.querySelector(".btn-count-plus");
+        const btnMinus = document.querySelector(".btn-count-minus");
+
+        const countNumber = document.querySelector(".count-number");
+
+        btnPlus.addEventListener("click", e => {
+            const currentNumber = Number(countNumber.textContent);
+            countNumber.textContent = currentNumber + 1;
+        });
+
+        btnMinus.addEventListener("click", e => {
+            const currentNumber = Number(countNumber.textContent);
+            countNumber.textContent = currentNumber - 1;
+        });
+
+    </script>
+</body>
+
+</html>
