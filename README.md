@@ -1,3 +1,5 @@
-"# simple-counter" 
-"# simple-counter" 
-"# simple-counter" 
+### 這是什麼？
+簡單的計數器。可以 +1、-1。
+
+### 內容有什麼？
+計數器分別使用 JS、ReactJS 練習。
